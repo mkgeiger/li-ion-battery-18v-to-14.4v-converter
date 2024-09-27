@@ -1,5 +1,10 @@
-# li-ion-battery-18v-to-14.4v-converter
-Convert Li-ion 18V (5s) battery to Ni-Mh or Ni-Cd 14.4V for the usage in older power tools
+# Li-ion 18V to 14.4V battery converter
+When you still have some older power tools lying around, which have defective NiMH- or NiCd-batteries and you want to reactivate them with newer Li-ion batteries, you are here on the right project page.
+Those old power tools were often powered with 14.4V (12 cells @ 1.2V), whereas nowadays the power tools are powered with 18V (5 Li-ion cells @ 3.6V).
+The circuit below is a converter from 18V to 14.4V. It implements also a deep discharge protection for the Li-ion battery. In order to not cause a permanent damage to the 18V Li-ion battery, it should not be discharged below ~16V (3.2V per cell).
+For sure this simple circuit does not supervise the voltage of each single cell because a power tools' Li-ion battery typically does not offer this feature. 
+The voltage thresholds for powering on and off can be calculated with the formulas in chapter `Simulation`. The circuit provides the potentiometer R1 to exactly trim these voltage thresholds.
+Also I recommend a heatsink for the mosfet and the diodes to not overheat those parts (depending on the used power tool several amps can flow).
 
 ### Schematic
 
